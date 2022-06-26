@@ -9,6 +9,8 @@ buildscript {
         nav_version = '2.4.2'
         retrofit_version = '2.9.0'
         viewpager_version = '1.0.0'
+        okhttp_logging_version = '4.9.0'
+        paging_version = '3.1.1'
     }
 }
 plugins {

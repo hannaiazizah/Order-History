@@ -1,4 +1,4 @@
-package com.kitabeli.hiring.data
+package com.kitabeli.hiring.domain
 
 enum class OrderStatus(val status: String) {
     CONFIRMED("confirmed"),

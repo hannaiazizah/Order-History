@@ -47,9 +47,11 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:$viewpager_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_logging_version"
     implementation "io.insert-koin:koin-android:$koin_version"
     implementation "io.insert-koin:koin-androidx-workmanager:$koin_version"
     implementation "io.insert-koin:koin-androidx-navigation:$koin_version"
+    implementation "androidx.paging:paging-runtime:$paging_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

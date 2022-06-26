@@ -2,7 +2,7 @@ package com.kitabeli.hiring.presentation
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.kitabeli.hiring.data.OrderStatus
+import com.kitabeli.hiring.domain.OrderStatus
 
 class OrderCollectionPagerAdapter(fragment: Fragment): FragmentStateAdapter(fragment) {
 
