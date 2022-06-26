@@ -4,4 +4,10 @@
     <string name="order_dispatch">Pesanan Dikirim</string>
     <string name="order_completed">Pesanan Tiba</string>
     <string name="order_cancelled">Pesanan Dibatalkan</string>
+    <string name="txt_order_id">Pesanan %d</string>
+    <string name="item_quantity">Jumlah: %s</string>
+    <string name="item_price">Rp %s</string>
+    <string name="item_delivered">Produk terkirim</string>
+    <string name="item_cancelled">Pengiriman dibatalkan</string>
+    <string name="item_packed">Produk sedang disiapkan</string>
 </resources>
