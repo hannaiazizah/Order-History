@@ -8,6 +8,7 @@ buildscript {
         lifecycle_version = '2.4.1'
         nav_version = '2.4.2'
         retrofit_version = '2.9.0'
+        viewpager_version = '1.0.0'
     }
 }
 plugins {

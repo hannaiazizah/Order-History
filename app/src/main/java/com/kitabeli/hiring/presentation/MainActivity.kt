@@ -1,7 +1,8 @@
-package com.kitabeli.hiring
+package com.kitabeli.hiring.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.kitabeli.hiring.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
