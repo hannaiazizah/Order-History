@@ -52,6 +52,6 @@ class OrdersPagingSource(
 
     companion object {
         private const val STARTING_PAGE_INDEX = 0
-        const val PAGE_LIMIT = 20
+        const val PAGE_LIMIT = 50
     }
 }

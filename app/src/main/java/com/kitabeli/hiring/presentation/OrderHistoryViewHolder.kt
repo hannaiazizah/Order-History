@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kitabeli.hiring.R
 import com.kitabeli.hiring.presentation.model.OrderHistoryUi
 
-class OrderHistoryViewHolder(private val itemView: View): RecyclerView.ViewHolder(itemView) {
+class OrderHistoryViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     private val itemAdapter by lazy { OrderItemAdapter() }
     private val orderList: RecyclerView = itemView.findViewById(R.id.list_order)
     private val orderView: TextView = itemView.findViewById(R.id.txt_order_history_id)

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:padding="2dp"
+    android:layout_marginBottom="4dp">
 
     <ImageView
         android:id="@+id/img_order_item"
@@ -12,7 +13,7 @@
         android:layout_height="96dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/gray_300"
+        tools:background="@color/gray_300"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -55,7 +56,7 @@
         android:id="@+id/txt_order_item_status_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="4dp"
+        android:padding="6dp"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

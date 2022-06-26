@@ -1,8 +1,8 @@
 package com.kitabeli.hiring.domain
 
 enum class OrderStatus(val status: String) {
-    CONFIRMED("confirmed"),
-    DISPATCHED("dispatched"),
-    COMPLETED("completed"),
-    CANCELLED("cancelled")
+    CONFIRMED("CONFIRMED"),
+    DISPATCHED("DISPATCHED"),
+    COMPLETED("COMPLETED"),
+    CANCELLED("CANCELLED")
 }

@@ -5,6 +5,6 @@ data class OrderItem(
     val quantity: Long,
     val itemName: String,
     val totalItemAmount: Long,
-    val status: ItemStatus,
+    val status: ItemStatus?,
     val itemImgUrl: String
 )

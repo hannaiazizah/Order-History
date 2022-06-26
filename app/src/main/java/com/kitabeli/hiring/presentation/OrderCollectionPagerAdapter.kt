@@ -1,10 +1,11 @@
 package com.kitabeli.hiring.presentation
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.kitabeli.hiring.domain.OrderStatus
 
-class OrderCollectionPagerAdapter(fragment: Fragment): FragmentStateAdapter(fragment) {
+class OrderCollectionPagerAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
 
     override fun getItemCount() = FRAGMENT_SIZE
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Order History</string>
+    <string name="app_name">Pesanan Saya</string>
     <string name="order_confirmed">Pesanan Diproses</string>
     <string name="order_dispatch">Pesanan Dikirim</string>
     <string name="order_completed">Pesanan Tiba</string>

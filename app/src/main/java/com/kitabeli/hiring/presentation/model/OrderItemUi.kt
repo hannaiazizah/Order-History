@@ -27,16 +27,16 @@ fun OrderItem.toOrderUi(): OrderItemUi = OrderItemUi(
     labelColor = getStatusLabelColor(status)
 )
 
-fun getStatusLabelText(itemStatus: ItemStatus): Int {
+fun getStatusLabelText(itemStatus: ItemStatus?): Int {
     return when (itemStatus) {
-        ItemStatus.NONE -> 0
         ItemStatus.CANCELLED -> R.string.item_cancelled
         ItemStatus.DELIVERED -> R.string.item_delivered
         ItemStatus.PACKED -> R.string.item_packed
+        else -> 0
     }
 }
 
-fun getStatusLabelBackground(itemStatus: ItemStatus): Int {
+fun getStatusLabelBackground(itemStatus: ItemStatus?): Int {
     return when(itemStatus) {
         ItemStatus.DELIVERED, ItemStatus.PACKED -> R.drawable.bg_rounded_green
         ItemStatus.CANCELLED -> R.drawable.bg_rounded_orange
@@ -44,7 +44,7 @@ fun getStatusLabelBackground(itemStatus: ItemStatus): Int {
     }
 }
 
-fun getStatusLabelColor(itemStatus: ItemStatus): Int {
+fun getStatusLabelColor(itemStatus: ItemStatus?): Int {
     return when(itemStatus) {
         ItemStatus.DELIVERED, ItemStatus.PACKED -> R.color.green
         ItemStatus.CANCELLED -> R.color.orange

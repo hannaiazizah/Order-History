@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -36,7 +37,7 @@ class OrderItemAdapter : RecyclerView.Adapter<OrderItemAdapter.ViewHolder>() {
         diffResult.dispatchUpdatesTo(this)
     }
 
-    class ViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgView: ImageView = itemView.findViewById(R.id.img_order_item)
         val titleView: TextView = itemView.findViewById(R.id.txt_order_item_name)
         val priceView: TextView = itemView.findViewById(R.id.txt_order_item_price)
@@ -46,16 +47,18 @@ class OrderItemAdapter : RecyclerView.Adapter<OrderItemAdapter.ViewHolder>() {
         fun bind(orderItemUi: OrderItemUi) {
             Glide.with(itemView.context)
                 .load(orderItemUi.imgUrl)
-                .fitCenter()
+                .placeholder(R.drawable.placeholder_order_image)
                 .into(imgView)
             titleView.text = orderItemUi.itemName
             priceView.text = itemView.context.getString(R.string.item_price, orderItemUi.price)
             quantityView.text = itemView.context.getString(R.string.item_quantity, orderItemUi.quantity)
             labelView.isVisible =
                 orderItemUi.labelText != 0 && orderItemUi.labelBackground != 0 && orderItemUi.labelColor != 0
-            labelView.text = itemView.context.getString(orderItemUi.labelText)
-            labelView.background = AppCompatResources.getDrawable(itemView.context, orderItemUi.labelBackground)
-            labelView.setTextColor(orderItemUi.labelColor)
+            if (labelView.isVisible) {
+                labelView.text = itemView.context.getString(orderItemUi.labelText)
+                labelView.background = AppCompatResources.getDrawable(itemView.context, orderItemUi.labelBackground)
+                labelView.setTextColor(ContextCompat.getColor(itemView.context, orderItemUi.labelColor))
+            }
         }
     }
 
